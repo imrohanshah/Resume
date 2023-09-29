@@ -10,15 +10,46 @@
         body {
             font-family: 'Space Grotesk', serif; /* Change font to Georgia */
             margin: 20px;
+            width: 750px;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5.7px;
             background-color: #7DF9FF; /* Change background color to #333333 */
             color: #000000; /* Change text color to #989898 */
         }
         
         .btn {
+            box-shadow: 5px 5px #000;
+            border: 2px solid #000 !important;
+            transition: all ease-in 0.2s !important;
             font-family: 'Space Grotesk', serif; /* Change font to Georgia */
             background-color: #7DF9FF; /* Change background color to #333333 */
+            border-radius: 5px;
 
         }
+
+        .btn:hover {
+             box-shadow: none;
+            transform: translateY(4px) !important;
+            transition: all ease-in 0.2s;
+            opacity: 1 !important;
+        }
+
+        // Button Block - Solid Drop Shadow Style - Ghost //
+
+.sqs-block-button-element  {
+  box-shadow: 10px 10px #000;
+  border: 2px solid #000 !important;
+  transition: all ease-in 0.2s !important;
+}
+
+.sqs-block-button-element:hover {
+  box-shadow: none;
+  transform: translateY(4px) !important;
+  transition: all ease-in 0.2s;
+  opacity: 1 !important;
+}
+
         .link {
             color: #3300ff;
         }
@@ -139,26 +170,30 @@
             <tr>
                 <td><b>Cloud</b></td>
                 <td>AWS EC2, AWS S3, AWS ECS, AWS Lambda</td>
-                <td>DevOps</td>
-                <td>Docker, Gitlab, Gradle, Maven</td>
             </tr>
             <tr>
                 <td><b>Framework</b></td>
                 <td>Springboot, Spring, Quarkus, OSGi</td>
-                <td>Integration</td>
-                <td>ChatGPT, Stripe payments</td>
             </tr>
             <tr>
                 <td><b>Programming Languages</b></td>
                 <td>Java, Python, SQL, Scala</td>
-                <td>Messaging</td>
-                <td>Kafka, SQS, SNS</td>
             </tr>
             <tr>
                 <td><b>Database</b></td>
                 <td>MySQL, PostgreSQL, Elasticsearch, LDAP</td>
-                <td></td>
-                <td></td>
+            </tr>
+            <tr>
+                <td><b>Messaging</b></td>
+                <td>Kafka, SQS, SNS</td>
+            </tr>
+            <tr>
+                <td><b>Integration</b></td>
+                <td>ChatGPT, Stripe payments</td>
+            </tr>
+            <tr>
+                 <td><b>DevOps</b></td>
+                <td>Docker, Gitlab, Gradle, Maven</td>
             </tr>
         </table>
     </div>
