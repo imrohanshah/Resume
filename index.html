@@ -14,6 +14,11 @@
             color: #000000; /* Change text color to #989898 */
         }
         
+        .btn {
+            font-family: 'Space Grotesk', serif; /* Change font to Georgia */
+            background-color: #7DF9FF; /* Change background color to #333333 */
+
+        }
         .link {
             color: #3300ff;
         }
@@ -32,6 +37,7 @@
 
         h4 {
             font-size: 16px;
+            cursor: pointer; /* Add cursor pointer for toggle */
         }
 
         img {
@@ -45,6 +51,10 @@
 
         .employment {
             margin-top: 20px;
+        }
+
+        .employment ul {
+            display: none; /* Hide lists by default */
         }
 
         .education {
@@ -89,7 +99,9 @@
         <h4>Brevitaz Systems (Sr. Software Scientist and Team Lead)</h4>
         <p>June 2021 - Present (2 Years)</p>
         <p>Involved in the Supply Chain Management Product (<a class="link" href="https://web.ftrace.com/en/">fTRACE</a>) and an Open source reference Implementation of the EPCIS standard (<a class="link" href="https://openepcis.io/">OPENEPCIS</a>).</p>
-        <ul>
+        <button onclick="toggleTasks('brevitaz')" class="toggle-button btn">Show me more</button>
+       
+        <ul id="brevitaz">
             <li>Led a team of Java developers to develop regular product features using Spring Boot and OSGi.</li>
             <li>Handled infrastructure for the product and was involved in architectural discussions for the product involving dealing with multiple distributed systems.</li>
             <li>Involved in Research and Development of new modules that use Quarkus as a tech stack.</li>
@@ -100,7 +112,8 @@
         <h4>OpenXCell Technolabs (Associate Software Engineer)</h4>
         <p>August 2019 - June 2021 (1 Year 11 Months)</p>
         <p>Worked as Associate Software Engineer in Java Spring Boot, handling the responsibility of 4 projects</p>
-        <ul>
+                <button onclick="toggleTasks('openxcell')" class="toggle-button btn">Show me more</button>
+        <ul id="openxcell">
             <li>Involved in designing and developing APIs and corresponding databases.</li>
             <li>Implemented regular sprint features in the backend.</li>
             <li>Involved in Production Debugging through log monitoring and analysis of high-volume logs using Elasticsearch and Kibana.</li>
@@ -156,5 +169,16 @@
             <li>AWS Solutions Architect Associate</li>
         </ul>
     </div>
+
+    <script>
+        function toggleTasks(id) {
+            var ul = document.getElementById(id);
+            if (ul.style.display === 'none' || ul.style.display === '') {
+                ul.style.display = 'block';
+            } else {
+                ul.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
